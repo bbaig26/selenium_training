@@ -1,5 +1,6 @@
 from selenium import webdriver
 import unittest
+from selenium.webdriver.support.ui import WebDriverWait
 import time
 
 class KayakFrontDoor(unittest.TestCase):
