@@ -25,7 +25,6 @@ class Udemy(unittest.TestCase):
         self.driver.delete_all_cookies()
         self.login.click_on_login()
         self.login.fill_login_form(email, passw)
-        # self.assertTrue(self.login.is_browser_on_the_page())
 
 if __name__ == '__main__':
     unittest.main()

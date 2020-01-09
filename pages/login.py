@@ -1,14 +1,12 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from .signup import *
 
 
 class LoginPage(object):
 
     def __init__(self, driver):
         self.driver = driver
-        self.signup = SignupPage(self.driver)
 
     def is_browser_on_the_page(self):
         WebDriverWait(self.driver, 30).until(
@@ -30,6 +28,3 @@ class LoginPage(object):
         login_pass_elem.send_keys(password)
         submit_login_form = self.driver.find_element_by_css_selector('#submit-id-submit')
         submit_login_form.click()
-
-
-
